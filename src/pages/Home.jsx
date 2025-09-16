@@ -8,11 +8,12 @@ function Home() {
         {/* Title Section */}
         <div className="text-center py-10">
           <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-gray-800 mb-4 font-poppins">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-gray-800 mb-4 tracking-tight leading-none">
               Community Learning Center
             </h1>
           </div>
         </div>
+        
 
         {/* Full-width Library Image */}
         <div className="w-full relative">
@@ -28,7 +29,7 @@ function Home() {
       {/* What We Do Section */}
       <section id="about" className="py-16 bg-gray-50">
         <div className="text-center max-w-6xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-4">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light font-inter text-gray-800 mb-4">
               What We Do
           </h1>
 

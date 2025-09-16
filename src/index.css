@@ -18,6 +18,14 @@ body {
   width: 100%;
 }
 
-.font-poppins {
-  font-family: 'Poppins', sans-serif;
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-crimson {
+  font-family: 'Crimson Text', serif;
 }
