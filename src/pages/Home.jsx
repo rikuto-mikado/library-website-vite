@@ -6,28 +6,29 @@ function Home() {
       {/* Hero Section */}
       <section id="hero" className="w-full">
         {/* Title Section */}
-        <div className="text-center py-16">
+        <div className="text-center py-10">
           <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-4">
-              Welcome to the Library
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-gray-800 mb-4 font-poppins">
+              Community Learning Center
             </h1>
           </div>
         </div>
 
         {/* Full-width Library Image */}
-        <div className="w-full">
+        <div className="w-full relative">
           <img
             src="/images/library-background-desktop.png"
             alt="Library"
             className="w-full h-auto object-cover"
           />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
       </section>
 
       {/* What We Do Section */}
       <section id="about" className="py-16 bg-gray-50">
         <div className="text-center max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-4">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-800 mb-4">
               What We Do
           </h1>
 
