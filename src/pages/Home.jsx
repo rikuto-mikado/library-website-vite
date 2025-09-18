@@ -23,7 +23,7 @@ function Home() {
           <img
             src="/images/library-background-desktop.png"
             alt="Library"
-            className="w-full h-auto object-cover"
+            className="w-full h-128 sm:h-160 md:h-200 object-cover"
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
@@ -43,7 +43,7 @@ function Home() {
           </p>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
             <div className="text-center p-6">
               <h3 className="text-2xl font-medium text-gray-800 mb-4">
                 Discover Your Next Adventure
@@ -84,6 +84,26 @@ function Home() {
               </p>
             </div>
           </div>
+
+          {/* Bookshelf Image */}
+          <div className="mb-16">
+            <img 
+              src="/images/bookshelf.jpg"
+              alt="Classroom with wooden desks"
+              className="w-full h-128 sm:h-80 md:h-64 lg:h-48 object-cover rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-52 bg-gray-800 text-white text-center relative">
+        <div className="absolute inset-0">
+          <img 
+            src="/images/call-to-action-section.png"
+            alt="Library background"
+            className="w-full h-full object-cover opacity-30"
+          />
         </div>
       </section>
     </div>

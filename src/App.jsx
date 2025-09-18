@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#FCFAF6] flex flex-col">
       <Header />
-      <main className="flex-1 pt-10"> {/* Fixed headerのためのpadding追加、コンテナ制限を削除 */}
+      <main className="flex-1 pt-16">
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

@@ -14,7 +14,7 @@ const Header = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="bg-white border-b border-gray-200">
+    <header className="bg-white border-b border-gray-200 fixed top-0 left-0 right-0 z-50 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-start h-16 space-x-8">
           {navItems.map((item) => (
