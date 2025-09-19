@@ -1,6 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function Home() {
+  const sectionsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.1,
+      }
+    );
+
+    const sections = sectionsRef.current.slice();
+    sections.forEach((section) => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -44,7 +77,10 @@ function Home() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-            <div className="text-center p-6">
+            <div
+              className="text-center p-6 fade-in-section"
+              ref={(el) => (sectionsRef.current[0] = el)}
+            >
               <h3 className="text-2xl font-medium text-gray-800 mb-4">
                 Discover Your Next Adventure
               </h3>
@@ -54,7 +90,10 @@ function Home() {
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div
+              className="text-center p-6 fade-in-section"
+              ref={(el) => (sectionsRef.current[1] = el)}
+            >
               <h3 className="text-2xl font-medium text-gray-800 mb-4">
                 Community Events & Programs
               </h3>
@@ -64,7 +103,10 @@ function Home() {
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div
+              className="text-center p-6 fade-in-section"
+              ref={(el) => (sectionsRef.current[2] = el)}
+            >
               <h3 className="text-2xl font-medium text-gray-800 mb-4">
                 Study & Work Spaces
               </h3>
@@ -74,7 +116,10 @@ function Home() {
               </p>
             </div>
 
-            <div className="text-center p-6">
+            <div
+              className="text-center p-6 fade-in-section"
+              ref={(el) => (sectionsRef.current[3] = el)}
+            >
               <h3 className="text-2xl font-medium text-gray-800 mb-4">
                 Digital Resources & Support
               </h3>
